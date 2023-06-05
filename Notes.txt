@@ -1,0 +1,66 @@
+---------------------    Styles in HTML     --------------------
+
+- Styles are additional attributes defined for HTML elements to make the presentation more interactive and Responsive.
+        <h2 align=""> Welcome</h2>
+
+- Styles are applied to any HTML in 3 ways.
+    1. Inline
+    2. Embeded 
+    3. External [CSS - Cascade Style Sheet]
+
+Inline Styles:
+    - syles are defined for every element individually by using a "style" attribute.
+    syntax:
+        <h1 style="color: red; text-align: center"></h1>
+
+    - Inline styles are faster in rendering.
+    - we can't re-use the styles.
+    
+    Note:
+        If one is looking for styles without regular extensions[changes] and reusability then it is better to use Inline.
+    
+Embeded Styles:
+    - styles are defined in an seperate <style> container and are kept in <head> or <body> section.
+
+        <style>
+            selector{
+                attribute: value;
+            }
+        </style>
+
+    - You can easily extend the styles and re-use the styles
+    - But embedded styes are slow in rendering compared to inline styles
+    - Embeded styles are only for a specific page. If you want the style across various pages then they are not available.
+    
+Note:
+    - The MIME type [Multi Purpose Internet MAil Extension] for styles is 
+
+            MIME type               Extension
+            -------------           ----------------------------
+            image/jpeg              .jpg, .jpeg, .jfif
+            application/msword      .doc, .docx, .rtf, .txt
+
+        - the MIME type is uesd by the rendering engine to process the code block written in page.
+        - the MIME tyoe for CSS is "text/css".
+    - The Media type for styles defines how to display various media content which includes screen, print and speech.
+        - You can classify the content for different media devices.
+
+        syntax:
+            <style type="text/css" media=" all | screen | print | speech ">
+
+            </style>
+
+
+    - You can embed styles in both <head> and <body>. The difference between them is that the styles in head section are intended to
+    load into browser momery and then accessed by page. Styles in body section are directly rendered into page, without loading into
+    memory.
+
+    - You can keep styles outside HTML scope but it is not recommended. 
+
+Extenal styles:
+    - You can write and save styles in a seperate styles style sheet with the extension ".css"
+    - So that you can link the style sheet to any HTML page and access styles across pages.
+    - You can use "Cascading Technique".[CSS]
+    
+    Note:
+        Using an external style sheet will increase the number of requests for a page and also page load time.
