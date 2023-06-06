@@ -9,6 +9,7 @@
     3. External [CSS - Cascade Style Sheet]
 
 Inline Styles:
+--------------
     - syles are defined for every element individually by using a "style" attribute.
     syntax:
         <h1 style="color: red; text-align: center"></h1>
@@ -20,6 +21,7 @@ Inline Styles:
         If one is looking for styles without regular extensions[changes] and reusability then it is better to use Inline.
     
 Embeded Styles:
+---------------
     - styles are defined in an seperate <style> container and are kept in <head> or <body> section.
 
         <style>
@@ -58,9 +60,100 @@ Note:
     - You can keep styles outside HTML scope but it is not recommended. 
 
 Extenal styles:
+---------------
     - You can write and save styles in a seperate styles style sheet with the extension ".css"
     - So that you can link the style sheet to any HTML page and access styles across pages.
     - You can use "Cascading Technique".[CSS]
     
     Note:
-        Using an external style sheet will increase the number of requests for a page and also page load time.
+        - Using an external style sheet will increase the number of requests for a page and also page load time.
+
+        - "Minification" is a coding technique followed by developers to reduce the size of the file.
+          It is the process of writing logic with less code.
+        - There are various minification tools, which one can use for compressing CSS file and reduce its size.
+
+        ex: cssminifirer
+
+        Unminified files  =>  for Development
+        Minified files    =>  for production
+
+        syntax:
+                
+                effects.css (unminified file)
+            
+            h2{
+            background-color: red;
+            color : white;
+            text-align: center;
+            }
+                
+                effects.min.css (minified file)
+            
+            h2{background-color:red; color:#fff;text-align:center;}
+
+        - The Minified file can be modified, but it is not recommended. 
+        - A "CDN" refers to "Content Delivery Network". By using CDN one can keep your CSS files in a seperate server and 
+          access from any project.
+
+----------------------  How styles take control over HTML Elements --------------
+
+- If the styles are applied by in-line method then they are  directly directly to specific element.
+        <div style="attribute:value"> </div>
+
+- If the styles are applied by Embedded or External method then one needs the help of "Selector".
+        <style type="text/css" media="all">
+            Selector{
+
+            }
+        </style>
+
+
+- Selector defines where to apply the given set of CSS attributes.
+- Selectors are calssified into various groups
+        1. Primary Selector
+        2. Rational Selector
+        3. Attribute Selector
+        4. Structural Pseudo classes
+        5. Dynamic Pseudo classes
+        6. Element State Pseudo classes 
+        7. Universal Selector
+        8. Language Selector 
+        9. Root Selector
+
+    Primary Selector:
+        There are three types of these Selectors
+            1.Type selector
+            2. ID selector
+            3. Class Selector
+
+        Type Selector:
+            - It defines the element node name [p, b, i, img, blockquote...].
+            - It will apply to every occurance of that element in page.
+            - You can't ignore for any specific occurance.
+            
+            syntax:
+                h1{                         
+                    ......;
+                }
+            
+                p{
+                    .......;
+                  }
+
+        ID Selector:
+            - It is defined by using "#" reference name
+            - It is accessed by using "id" attribute.
+            
+            syntax:
+                #refName{
+                    ....;
+                }
+
+                <div id="refName"> </div>
+
+            - You can apply effects only to the required element.
+            - Every element can use only "one" ID reference.
+            - Hence you can't apply multiple sets of effects to one Element.
+
+
+
