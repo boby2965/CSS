@@ -121,12 +121,14 @@ Extenal styles:
         9. Root Selector
 
     Primary Selector:
+    -----------------
         There are three types of these Selectors
             1.Type selector
             2. ID selector
             3. Class Selector
 
         Type Selector:
+        ----------------
             - It defines the element node name [p, b, i, img, blockquote...].
             - It will apply to every occurance of that element in page.
             - You can't ignore for any specific occurance.
@@ -141,6 +143,7 @@ Extenal styles:
                   }
 
         ID Selector:
+        -------------
             - It is defined by using "#" reference name
             - It is accessed by using "id" attribute.
             
@@ -155,5 +158,17 @@ Extenal styles:
             - Every element can use only "one" ID reference.
             - Hence you can't apply multiple sets of effects to one Element.
 
+        Class Selector:
+        ---------------
+            - It defines effects by using ".className" reference.
+            - You can access and apply by using "Class" attribute.
 
+            Syntax:
+                .className{
+                    ........;
+                }
+
+                <div class="className"> </div>
+
+            - Every element can use Multiple classes, Which are seperated with a black space.
 
