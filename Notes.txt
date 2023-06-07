@@ -171,4 +171,94 @@ Extenal styles:
                 <div class="className"> </div>
 
             - Every element can use Multiple classes, Which are seperated with a black space.
+Note:
+------
+    - If any element is defined with all 3 selectors, then the set of effects that will apply are as follows
+    - If same set of attributes are defined then the effects will apply according to priority
+            1st ID Selectors
+            2nd Class Selectors
+            3rd Type Selectors
+    - If different set of attributes are defined then all are applied.
+
+    - If any element is defined with styles from inline, embedded and external file techniques, then the set of effects that are applied as follows
+    - If same set of attributes are defined in all 3 locations then it will apply according to priority 
+            1st Inline
+        `	2nd Embedded
+            3rd External
+    - If differrent set of attributes are defined then all are applied.
+    - If similar effects are defined in embedded and external file, then it is defined by using occurance order.[LIFO] Last-In-First-Out.
+
+    Dynamic Pseudo Classes:
+    -----------------------
+        - Dynamic refers to styles applied to element according to state and situation.
+        - Pseudo refers to false representaion 
+                link => anchor
+        - class is a program template, which comprises of sample data and logic that you can implement and costumise according to requirement.
+        - It allows to configure certain actions without manually writing any logic.
+        - CSS Dynamic Pseudo classes are 
+            :hover	 => It defines effects when mouse pointer is over the element.
+            :active  => It defines effects when mouse button is down on any element.
+            :link	 => It defines effects when for hyperlink in normal state.
+            :target  => It defines effects when element is target of any link.
+            :visited => It sets effects for visited links.
+
+    Element State Pseudo Classes:
+    ------------------------------
+        :checked   => It defines effects when a radio or check box is checked
+        :focus     => It defines effects when element gets focus
+        :disabled  => It defines effects when element is disabled
+        :enabled   => It defines effects when element disabled is false
+        :read-only => It defines effects when element is set with read-only.
+
+    Validation State Pseudo Classes:
+    --------------------------------
+        :required       => If element is defined with required attribute
+        :optional       => If element is not defined with required
+        :in-range       => If value is with in specified range [min & max]
+        :out-of-range   => If value is out of range [lower and upper bound]
+        :invalid        => If any validation failed
+        :valid          => If validation evaluates success.
+
+    Structural Pseudo Classes:
+    ---------------------------
+        :nth-chid()           =>It selects specific child by using level number or occurance name[even,odd]
+                     syntax:
+                            nth-child(4){
+
+                            }
+                            nth-child(even | odd){
+                                        
+                            }         
+
+        :first-child          => First child element
+        :last-child           => Last child element
+        :nth-of-type          => It can select every nth occurance from specified location.
+        :nth-last-of-type     => It can select every nth occurance from specified location.[top to bottom]
+                    syntax:
+                        nth-of-type(2n){            
+                                                => every 2nd occurance starting from 2nd.
+                        }
+                        nth-of-last(2n+1){
+                                                => every 2nd occurance starting from 1st.
+                        }
+                        nth-last-of-type(2n+1){
+                                                => every 2nd occurance starting from bottom 1st.
+                        }
+
+    Rational Selectors:
+    -------------------
+        parent child {
+                            => It will apply effects to all child elements in parent.
+        }
+        parent > child{ 
+                            => apply effects to only direct child elements.
+        }
+        elder + sibling{
+                            => Adjacant selectors
+        }
+        elder ~ sibling {
+                            => General siblings [all elements that occur after elder]
+        }
+        
+
 
