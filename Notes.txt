@@ -428,4 +428,39 @@ CSS Box Model:
         padding-bottom
 
     CSS Border attributes:
-        
+        border              : short hand for width, style, color.
+                            {
+                            border: 2px dotted red;
+                            }
+        border-style        : dotted, dashed, solid, double, groove.
+        border-width        : size in pixels
+        border-color        : any color
+
+        border-left         : left short hand for width style and color
+        border-left-style
+        border-left-color
+        border-left-width
+
+        .... similar in all directions....
+
+        border-image        : It sets any image as border, but it requires suitable combination of values.
+                            you can set border image with combination of border
+            syntax:
+                {
+                    border  : 10px solid colorName;
+                    border-image    : url("any Path") space | stretch valueForStretch|space
+                }
+
+            Ex:
+            {
+                border: 20px solid transparent;
+                border-image: url("images/border.gif") stretch 80;
+                margin: 0px 100px 0px 100px;
+                padding: 50px;
+            }
+
+        border-radius               : short hand for all directions.
+        border-top-right-radius
+        border-top-left-radius
+        border-bottom-right-radius
+        border-bottom-left-radius
