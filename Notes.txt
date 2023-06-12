@@ -259,6 +259,173 @@ Note:
         elder ~ sibling {
                             => General siblings [all elements that occur after elder]
         }
+
+
+    Attribute Selectors
+    -------------------
+    - They apply effects based on the attribute of any element 
+            <input type="button">
+            <input type="text">
+        syntax:
+            element[attribute]{}	=> where ever the attribute is defined, there 							effects are applied. It dosen't require a value to 						compare.
+        ex: 
+            p[id]{}
+        syntax:
+            element[attribute=value]{} => attribute must match with value
+        ex:
+            input[type=text]{}
+
+    - Attribute selector provides various conditions.
+            [attribute=value]    =>  equal to/ exact match
+            [attribute^=value]   =>  starts with
+            [attribute$=value]   =>  ends with
+            [attribute|=value]   =>  individual or start and seperated with "-"
+            [attribute~=value]   =>  individual or seperated with space[any place]
+
+    Classes with Inherit and Implement:
+    -----------------------------------
+        ::placeholder  => It applies effects to placeholder in input element.
+        ::selection    => It applies effects to selected content on page.
+        ::before	=> It sets effects to element before the current element
+        ::after		=> It sets effects to elements after the current element
+
+    - It defines the effects of a base class, which you implement and customize.
+    - We can't apply all types of styles. They are restricted with specific set of styles.
+    [text,backgrounds and Font Styles etc..]
+
+        ::first-letter	=> It sets effects only for first letter in container
+        ::first-line	=> It sets effects for first line in container
+
+    Universal Selectors:
+    --------------------
+        *{}	=> It refers to all elements in page.
+        syntax:
+            <style>
+                *{
+                font-family:Arial;
+                }
+            </style>
+
+Summary:
+--------
+- CSS Integration Techniques
+	Inline, Embeded, External File
+- CSS Selectors
+	all types of selectors
+- CSS Rules 
+	Priority between inline, embeded and external
+	Priority between type, Id and class
+
+
+CSS Inheritance:
+-----------------
+- It is the process of implementing and inheriting the features of parent element.
+- CSS automatically inherits few effects to child element based on parent.
+- You can control the inheritance by using following values
+        a) inherit      => Implements the parent effects, you can inherit any specific or all.
+        b) initial      => Sets the default effects before the styles are implemented.
+        c) unset        => It cleans up all the effects, including the pre-difined effects for element.
+
+CSS Units:
+----------
+- CSS unnits are classified into 2 categories
+        a) Absolute units
+        b) Relative Units
+
+- absolute units are applied to any element and they are independent, regardless parent and child hierarchy.
+                    px              pixels
+                    in              inch
+                    cm              centimeters
+                    pt              points
+                    pi              picas
+
+- Relative units are applied to child element with regard to the parent. The child element size varies according to its parent.
+                    em              element size
+                    rem             root element size
+
+CSS Colors:
+-----------
+- Color Name
+	{
+	color:red;
+	}
+- Shade Name
+	{
+	color: darkred;
+	}	
+- Hexa Decimal
+	{
+	color:#ff0000; (or) #f00
+	}
+- RGB colors
+	{
+	color:rgb(red,green,blue); 0 to 255
+	}
+	{
+	color:rgb(255,0,0);
+	}
+- RGBA colors
+	{
+	color:rgba(red, green, blue, alpha)	alpha=0 to 1
+	}
+	{
+	color:rgba(255,0,0,0.6);
+	}
+- HSL colors [Hue, Saturtion, Light]
+	hue		    => 0 to 360 deg color cycle  0=red, 120=green, 240=blue
+	saturation	=> 0 to 100% gray shade
+	light		=> 0 to 100% brightness
+
+	{
+	background-color:hsl(80, 60%, 80%);
+	}
+- HSLA 
+	{
+	background-color:hsla(80,60%,80%,0.6);
+	}
+- Garadiant colors
+	a) Linear 
+	b) Radial
+	- You can set gradiant color only by using background-image Attribute.
+	 linear-gradient()	=> They can have any color value [name, shade, hex, rgb...]
+	 radiant-gradient()	They can use multiple colors. 
+	syntax:
+		{
+		background-image:linear-gradiant(to right top, red, yellow, rgb(37,230,37));
+		}
+
+CSS Box Model:
+--------------
+    1) Margin
+    2) Padding
+    3) Border
+    4) Width
+    5) Height
+
+    CSS Margin Attributes:
+        margin              : shorthand for all directions
+                                [top, right, bottom, left]
+
+                            {
+                                margin: top right bottom left;
+                            }
+                            {
+                                margin: 0px 100px 0px 100px;    => Left and right margins
+                            }
+                            {
+                                margin: 50px;                   => all directions 50px
+                            }
+        margin-left         : sets left margin 
+        margin-right        : sets right margin 
+        margin-top          : sets top margin 
+        margin-bottom       : sets bottom margin 
+
+    CSS Padding Attributes:
+        padding         : short hand 
+        padding-left 
+        padding-right
+        padding-top
+        padding-bottom
+
+    CSS Border attributes:
         
-
-

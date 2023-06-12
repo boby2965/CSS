@@ -1,1 +1,1 @@
-Learn Basic CSS from Scratch
+Learn CSS from Scratch
