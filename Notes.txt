@@ -464,3 +464,111 @@ CSS Box Model:
         border-top-left-radius
         border-bottom-right-radius
         border-bottom-left-radius
+
+CSS positions:
+--------------
+    position-absolute
+    position-relative
+    position-fixed
+    position-sticky
+    position-static
+
+    Static Position:
+    ----------------
+    - It keeps the element according to the normal flow of the document
+    - It is not effected by left, right, top and bottom values.
+    - It is the defalt position for element 
+
+    Absolute Positon:
+    -----------------
+    - It removes the element from the normal flow the document.
+    - It can be placed at any position using left, right, top and bottom value.
+    - It keeps the element attached to the content in page
+    - Hence it scrolls | moves along the content
+        syntax:
+        -------
+            .offer{
+                position: absolute;
+                right: 10px;
+                top:50px;
+            }
+
+    Fixed Position:
+    --------------
+    - It removes the element from its normal flow
+    - You can keep element at any position using left, right, top and bottom values.
+    - It keeps your element attached to page and not to the content
+    - Hence It is locked with scrolling. It will not move along with the content in page.
+         syntax:
+         -------
+            .offer{
+                position: fixed;
+                right: 10px;
+                top:50px;
+            }
+
+    Sticky Position:
+    ----------------
+    - It keeps the element according to normal flow of Document
+    - It can stick the element to page after reaching specific units, which are defined by using left, right, top or bottom.
+        syntax:
+        --------
+            dt{
+                color: white;
+                background-color: gray;
+                width: 100px;
+                position: sticky;
+                top: 0px;
+            }
+
+    Relative Position:
+    ------------------
+    - It removes the element from the normal flow.
+    - But it keeps the elements with relative to the parent.
+    - Relative is the position defined for parent element
+    - So that it can keep all its child elements within the content of the page.
+        syntax:
+        -------
+            parentElement{
+                position: relative;
+            }
+            childElement{
+                position: absolute:
+                top:0px;            => top and right are relative to parent not the page.
+                right:0px;
+            }
+    
+CSS Z-index:
+------------
+    - It is used to change the position of any element by changing the overlap order.
+    - You can send back or backward.
+    - You can bring front or forward.
+        syntax:
+        -------
+        #card-1{
+            background-image: url(images/a1.jpg);       => at the top of all cards
+            z-index: 2;
+        }
+        #card-2{
+            background-image: url(images/a2.jpg);          => at the middle
+            margin-top:25px;
+            margin-left:25px;
+            z-index: 1;
+        }
+        #card-3{
+            background-image: url(images/a3.jpg);       => at the bottom of all cards
+            margin-top:50px;
+            margin-left:50px;
+            z-index: 0;
+        }
+
+CSS Float and Clear:
+--------------------
+    - Float allows to set text wrapping with regard to element in page.
+    - It have two positions     
+        a) float-left
+        b) float-right
+    - The float effect will span to next occuring element, which you have to disable by using "clear"
+        a) clear-left
+        b) clear-right
+        c) clear-both
