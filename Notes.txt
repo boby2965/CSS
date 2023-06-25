@@ -44,6 +44,7 @@ Note:
 
         - the MIME type is uesd by the rendering engine to process the code block written in page.
         - the MIME tyoe for CSS is "text/css".
+
     - The Media type for styles defines how to display various media content which includes screen, print and speech.
         - You can classify the content for different media devices.
 
@@ -51,7 +52,6 @@ Note:
             <style type="text/css" media=" all | screen | print | speech ">
 
             </style>
-
 
     - You can embed styles in both <head> and <body>. The difference between them is that the styles in head section are intended to
     load into browser momery and then accessed by page. Styles in body section are directly rendered into page, without loading into
@@ -568,7 +568,97 @@ CSS Float and Clear:
     - It have two positions     
         a) float-left
         b) float-right
+
     - The float effect will span to next occuring element, which you have to disable by using "clear"
         a) clear-left
         b) clear-right
         c) clear-both
+
+        syntax:
+        -------
+            img{
+               float:left;
+            }
+
+CSS Display:
+------------
+- none
+- inline
+- block
+- grid
+- flex  
+
+    display: none   
+        - It can hide element and adjust the adjacent elements into the place of hidden element
+            h2{
+                display: none;
+            }
+
+    note:
+    ---- 
+        - Visibility: hidden => will hide the element but keep the space allocated for element.
+        - display: none      => removes allocated space for element.
+
+    display: inline
+        - It is used for elements to arrange them side-by-side.
+        - It is not applied for the container but for the individual elements.
+        syntax:
+            ul{
+                display: inline;     //invalid   => ul is a container for <li>
+            }
+
+            li{
+                display:inline;     //valid
+            }
+
+    display: block
+        - It keeps the elements arranged in one column.
+        - It is one below another.
+        syntax:
+            nav span{
+                display:block;
+            }
+
+    display: flex
+        - It is used for container that contains elements.
+        - It is not for individual elements 
+        syntax:
+            li{
+                display: flex;          // invalid 
+            }
+
+            ul{
+                display: flex;          // valid
+            }
+
+        - flex provies alignment to keep all elements aligned horizontally and vertically
+            justify-content     : center, space-between, space-around
+            align-items         : baseline, center, top
+
+        - The orientation of elements depends on flex direction.
+            flex-direction      : row, row-reverse, column, column-reverse.
+
+        - The wrapping of content in container is controlled by 
+            flex-wrap       : wrap, no-wrap 
+
+        note:
+        ----
+            - flex-direction        : It sets rows and column wise content, which can display in reverse order.
+                                        a) row
+                                        b) row-reverse
+                                        c) column
+                                        d) column-reverse
+            - flex-wrap             : It defines in how many rows and columns the container elements can display. It depsnds on width 
+                                        and height of container.
+
+Display Grid:
+-------------
+- Display grid allows to arrange content into rows and columns, which can change dynamically.
+    display: grid
+    grid-template-column
+    grid-row
+    grid-column
+    grid-gaps
+
+- If you want to create responsive page with orientation, then you need CSS "media" queries.
+- Media queries can identify the device and its orientation.
