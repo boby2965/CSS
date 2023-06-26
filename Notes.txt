@@ -735,5 +735,106 @@ CSS Text Effects:
         text-transform          : uppercase, lowercase, captilize[Title case]
         text-indent             : It sets space for first line in paragraph.
         
+    Word and Character Attributes: 
+        letter-spacing          : It sets space b/w chars
+        line-height             : It sets space b/w lines
+        word-spacing            : It sets space b/w words
+        word-break              : It breakes the words that occur in right margin
+        word-wrap               : It controls the breaking of the word at right edge
+        white-space             : It removes the wrapping of texxt in container 
+        text-overflow           : It controls the overflowingg text using styles 
+    
+    EX: How to display more content in container using overflow?
+        1. set width for container          "width:500px"
+        2. Add border to container          "border:2px solid black"
+        3. Remove wrapping of text          "white-space:nowrap"
+        4. Hide Overflowing text            "overflow:hidden"
+        5. Set a symbol for text overflow   "text-overflow:ellipis"
+    
+    syntax:
+        p{
+            width:300px;
+            border:2px solid black;
+            white-space: nowrap;
+            overflow:hidden;
+            text-overflow:ellipsis;
+        }
 
+CSS List Styles:
+----------------
+list-style          : short hand for all effects
+list-style-type     : It sets vsrious ordered and unordered styles.
+list-style-image    : It sets a custom image
+list-style-position : It sets position inside or outside border.
 
+CSS Overflow:
+-------------
+hidden      : Hides the overflowing content in container
+scroll      : sets a scrollbar horizontally and vertically 
+auto        : sets a scrollbar if necessary
+
+CSS 2D Transforms:
+------------------
+- 2D Transforms are 2 Dimensional transformations along x and y axis.
+- They are used to control location, size, and orientation.
+- CSS 2D Tansformations are 
+        translate()
+        scale()
+        skew()
+        rotate()
+        matrix()
+- They are definrd by using "transform" attribute.
+
+syntax:
+        transform   : translate()
+        transform   : scale()
+
+note: 
+    Transform can't work on various legacy browsers. Hence you have to apply transformation by using additional 
+    plugins.
+        -webkit-transform       => safari, edge..
+        -moz-transform          => firefox
+        -0-transform            => opera
+        -ms-transform           => Internet Explorer
+
+    syntax:
+        {
+            transform: translate();
+            -webkit-transform: translate();
+            -moz-transform: translate();
+            -0-transform: translate();
+            -ms-transform: translate();
+        }
+
+    Translate:
+        - It is a method used to change the position of element along "x and Y" axis.
+                a) translate()      shorthand
+                b) translateX()     along x-axis horizontally
+                c) translateY()     along y-axis vertically 
+
+    Scale:
+        - It changes the size of the element along X and Y axis.
+            a) scale()          short hand
+            b) scaleX()         width 
+            c) scaleY()         height 
+        - Units are defined using integer value 1 = 100%
+        syntax:
+            transform : scale(1);
+        
+    Skew:
+        - It is used to tilt element by specified angle.
+            a) skew()       shorthand
+            b) skewX()      
+            c) skewY()
+        - The units are defined by using "deg"
+            syntax:
+                transform: skewX(20deg);
+                transform: skewY(-20deg);
+            
+    Rotate:
+        - It rotates the element by specified angle.
+            a) rotate()        shorthand
+            b) rotateX()       
+            c) rotateY()
+
+            
