@@ -662,3 +662,78 @@ Display Grid:
 
 - If you want to create responsive page with orientation, then you need CSS "media" queries.
 - Media queries can identify the device and its orientation.
+
+CSS Columns:
+------------
+- It splits your contet into multiple columns.
+- Grid is used for arranging content into rows and columns.
+- Column is is used for continuous columns without overflowing of data.
+- Style Attributes:
+        columns             : It specifies the number of columns to deisplay
+        column-width        : sets width of columns
+        column-gap          : sets space between columns
+        column-span         : It can merge columns
+        column-rule         : It sets a seperator line for columns 
+
+    Note: 
+        Span can merge all columns only. You can't merge specified number of columns.
+        If you are displaying a numbering list in columns
+            a) Side byy side numbering  => Display Grid
+            b) Numbering in Columns     => columns 
+
+        syntax:
+        -------
+            ol{
+                display:grid;
+                grid-template-columns:6fr 6fr;
+
+            }
+
+            1.HTML                          2.CSS
+            3.Bootstrap                     4.JavaScript 
+
+            ol{
+                coumns:2;
+            }
+
+            1.HTML                          3.Bootstrap
+            2.CSS                           4.JavaScript
+
+CSS Backgrounds:
+---------------
+background-color                : sets a color 
+background-image                : sets background image and gradiant colors
+background-positions            : Location of background image 
+background-size                 : size of background image, contain, cover 
+background-repeat               : no-repeat, repeat-x, repeat-y
+background-attachment           : scroll, fixed 
+
+- we can set multiple background images by using the below syntax   
+        body{
+            background-image:url("image1"), url("image2");
+            background-repeat: no-repeat , repeat;
+            background-size: 400px 400px, 200px 200px;
+            background-position: center center;
+            background-attachment: fixed, scroll;
+        }
+
+CSS Text Effects:
+----------------
+    Font Attributes:
+        font-size
+        font-family
+        font-weight[bold]
+        font-style[italic]
+        font-variant[capitilization]: small-caps => converts to capitals
+
+    Text Attributes:
+        text-align              : left,center,right, justify
+        text-decoration         : It is a short hand for line, style, color
+                                    line: underline, overline, linethrough
+                                    style: double, dotted, wavy
+                                    color: any line color
+        text-transform          : uppercase, lowercase, captilize[Title case]
+        text-indent             : It sets space for first line in paragraph.
+        
+
+
