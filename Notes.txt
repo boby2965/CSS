@@ -837,4 +837,43 @@ note:
             b) rotateX()       
             c) rotateY()
 
-            
+    matrix:
+        - It can apply multiple transformations for element.    
+        syntax:
+            matrix(scaleX(),skewX(),skewY(),scaleY(), translateX(),translateY())
+        
+        - matrix will not provide option for rotate().
+        - matrix values 
+            scaleX(), scaleY()          1=100%
+            translateX() translateY()   100=100px
+            skewX(), skewY()            1=10deg
+
+        syntax:
+            matrix(1,2,0,2,300,100);
+
+CSS 3D:
+-------
+- It defines # dimensioonal effects for elements along x,y and z axis.
+- 3D methods
+    translate3D()
+    scale3D()
+    skew3D()
+    rotate3D()
+    matrix3D()
+
+    syntax:
+        transform: scale3D(2,2,3);
+                (or) 
+        transform: scaleX(2);
+        transform: scaleY(2);
+        transform: scaleZ(3);
+
+CSS Transition:
+--------------
+- Trnasition is used to control the transformations.
+- The attributes are 
+        transition                  : It is a short and for all effects.
+        transition-duration         : total time taken for completing the transformation.
+        transition-delay            : It can delay the animation start time.
+        transition-timing-function  : It is a pre-defined animation effect to apply.
+        

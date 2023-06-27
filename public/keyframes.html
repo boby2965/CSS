@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            overflow:hidden;
+            display:flex;
+            justify-content: center;
+            align-items:center;
+            height:500px;
+        }
+        @keyframes SlideEffect
+        {
+            from{
+                margin-left:130%;
+                width:300px;
+                height:300px;
+                transform:rotate(180deg);
+            }
+            50%{
+                transform:scale(2);
+            }
+            90%{
+                opacity:0;
+            }
+            to{
+                margin-left:0%;
+                width:100px;
+                height:100px;
+                transform:rotate(0deg);
+               
+            }
+        }
+        img{
+            animation-name:SlideEffect;
+            animation-duration: 5s;
+            animation-direction:alternate;
+            animation-iteration-count:infinite;
+        }
+    </style>
+</head>
+<body>
+    <img src="images/a3.jpg" width="100" height="100">
+</body>
+</html>
