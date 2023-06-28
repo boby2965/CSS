@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keyframe Demo</title>
+    <style>
+        body{
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            height:500px;
+            font-size:150px;
+        }
+        @keyframes ZoomIn{
+            from{
+                opacity:0;
+                color:red;
+            }
+            to{
+                opacity:1;
+                color:yellow;
+            }
+        }
+        p{
+            animation-name:ZoomIn;
+            animation-duration:2s;
+            animation-iteration-count:infinite;
+            animation-direction: alternate;
+        }
+    </style>
+</head>
+<body>
+    <p>Welcome to CSS</p>
+</body>
+</html>

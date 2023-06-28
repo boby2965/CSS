@@ -876,4 +876,80 @@ CSS Transition:
         transition-duration         : total time taken for completing the transformation.
         transition-delay            : It can delay the animation start time.
         transition-timing-function  : It is a pre-defined animation effect to apply.
-        
+        transition-property         : It defines about which properrty have to use the transition attributes.
+
+CSS KeyFrames:
+--------------
+- Keyframe is used for configuring animation effects.
+- Usually animation is defined in frames.
+- The basic frame rate for animation is 30fps or 60fps.
+- CSS keyframes allows to design frame by frame animation or tweening animation.
+    synatx:
+        @keyframes animationName
+        {
+            from{
+                            // Initial state 
+            }
+            to{
+                            // Final state 
+            }
+        }
+
+        @keyframes animationName 
+        {
+            from{
+
+            }
+            20%{
+
+            }
+            60%{
+
+            }
+            to(
+
+            )
+        }
+
+- To apply keyframe to any element in page you have to usse animation attributes.
+        animation-name:
+        animation-duration:
+        animation-delay:
+        animation-direction:
+        animation-iteration-count:
+        animation-property:
+    syntax:
+        img{
+            animation-name:keyframeName;
+            animation-duration:2s;
+            animation-delay:1s;
+            animation-direction:alternate;
+            animation-iteratioin-count:infinite;
+            animation-property:width,height;
+        }
+
+Building a Responsive Page:
+--------------------------
+- Respaonsive means the content fits according to the device.
+- To design a responsive page we need following attributes and implementation.
+    1. Meta viewport is used to configure responsive page.
+    2. Fluid images : image size set with "%".
+    3. Display : grid, flex
+    4. Media Query 
+
+    Media Query:
+    ------------
+    - It is used for designing responsice pages.
+    - Media query comprises of 
+        a) media type 
+        b) orientation 
+        c) min-width 
+        d) max-width 
+    
+        Media Type defines  : all, print, speech, screen 
+        Orientation defines : landscape , potrait
+        min-width           : It refers to units for specified pixes to the end.
+                min-width:800px;        => from 800px to end.
+        max-width           : It refers to units upto specified pixels from 0.
+                max-width:800px;        => from 0 to 800px.
+                
